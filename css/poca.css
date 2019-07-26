@@ -1,26 +1,41 @@
 body{
   margin:0;
   width:100%;
-  ;background-color:gray;
+  background-color:gray;
 }
 #logo{
   width: 50%;
   height:auto;
-  
-
 }
 .jumbotron{
 margin:auto;
- 
-  background-color: gray;
+
+  background-image:radial-gradient(circle,#f75515,#9a0eeb);
 }
 .jumbotron a{
-  font-size:40px;
+  
+  font-size:30px;
+  font-family: 'Bungee Inline', cursive;
+  background-color: black;
 }
+.jumbotron a:hover{
+  background-color:white;
+}
+
 img{
   width:100%;
 }
-.pocad{
+#pocad{
   width:100%;
+  font-family: 'Bungee Inline', cursive;
+  font-weight: 500;
+  font-size:75px;
+  color:blue;
  
+}
+.footer{
+  margin:auto;
+display:flex;
+justify-content: space-around;
+background-image:radial-gradient(circle,#f75515,#9a0eeb);
 }
