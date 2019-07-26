@@ -1,0 +1,23 @@
+body{
+  margin:0;
+  width:100%;
+  ;background-color:gray;
+}
+#logo{
+  width: 50%;
+  height:auto;
+  
+
+}
+.jumbotron{
+margin:auto;
+ 
+  background-color: gray;
+}
+img{
+  width:100%;
+}
+.pocad{
+  width:100%;
+ 
+}
