@@ -3,6 +3,8 @@ body{
   width:100%;
   background-color:gray;
 }
+
+
 #logo{
   width: 50%;
   height:auto;
@@ -17,6 +19,8 @@ margin:auto;
   font-size:30px;
   font-family: 'Bungee Inline', cursive;
   background-color: black;
+  width:100%;
+
 }
 .jumbotron a:hover{
   background-color:white;
@@ -38,4 +42,31 @@ img{
 display:flex;
 justify-content: space-around;
 background-image:radial-gradient(circle,#f75515,#9a0eeb);
+font-size:30px;
+color:blue;
+
+}
+#p-order{
+  top:10%;
+  left:10%;
+}
+#p-choices{
+  top:10%;
+  right:10%;
+}
+#p-choices,#p-order{
+  font-family: 'Bungee Inline', cursive;
+  font-weight: 400;
+  font-size:30px;
+  color:blue;
+  
+}
+@media (max-width: 720px) {
+  .jumbotron a {
+    font-size:20px;
+    display:block;
+  }
+  #pocad{
+    font-size: 45px;
+  }
 }
