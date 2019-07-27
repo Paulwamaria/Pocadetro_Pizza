@@ -18,8 +18,8 @@ margin:auto;
   
   font-size:30px;
   font-family: 'Bungee Inline', cursive;
-  background-color: black;
-  width:100%;
+  /* background-color: black; */
+ 
 
 }
 .jumbotron a:hover{
@@ -37,13 +37,13 @@ img{
   color:blue;
  
 }
-.footer{
-  margin:auto;
+.footr{
+
 display:flex;
 justify-content: space-around;
 background-image:radial-gradient(circle,#f75515,#9a0eeb);
-font-size:30px;
-color:blue;
+font-size:26px;
+color:black;
 
 }
 #p-order{
@@ -61,12 +61,29 @@ color:blue;
   color:blue;
   
 }
+/* media query */
 @media (max-width: 720px) {
   .jumbotron a {
     font-size:20px;
     display:block;
+    margin-top:2px; 
+    width:100%;
   }
   #pocad{
-    font-size: 45px;
+    font-size: 32px;
+  
+  }
+  #logo{
+    display: block;
+  }
+  #p-choices{
+    top: 40%;
+    right:40%;
+    font-size:20px;
+  }
+  .footr{
+    display:block;
+    font-size: 14px;
+    color:black;
   }
 }
