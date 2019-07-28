@@ -1,35 +1,9 @@
-$(document).ready(function(){
 //Decrare variables
-var costBySize=0;
-var costOfCrust=0;
-var costOfToppings=0;
-var costOfDelivary=0;
+var costBySize;
+var costOfCrust;
+var costOfToppings;
+var costOfDelivary;
 var numberOfPizzas;
-
-//front-end
-
-
-$("form#pizza-form").submit(function(event) {
-  event.preventDefault();
-
-  var sizeOfPizza = $("#dropdown").children("option").filter(":selected").text()
-  var selectedCrust=$("input[name='crust']:checked").val();
-  //Access the selected toppings and put them in an array
-  var toppings=[];
-  var totalToppingCost=0;
-  $("input[name='toppings']:checked").each(function(){            
-    toppings.push(parseInt(($(this).val())));
-   
-    // toppings.forEach(topping=> totalToppingCost =totalToppingCost+topping);
-    totalToppingCost=toppings.reduce((totalToppingCost,topping)=>totalToppingCost+topping);
-    
-});
-  var delivaryBool=$("input[name='delivary']:checked").val();
-  var numberOfPizzas=$("input#how-many").val();
-  var locationName=$("input#locationName").val();
-  
-
-  $("ul#totalCost").append("<li><span class='contact'>" + totalToppingCost+ " "+ "</span></li>");
 
   //create constructors
   //back-end
@@ -43,6 +17,51 @@ $("form#pizza-form").submit(function(event) {
   PizzaPriceCalc.prototype.pizzaPrice=function(){
     return this.numberOfPizzas*(this.sizeOfPizza + this.selectedCrust + this.totalToppingCost);
   }
+
+
+$(document).ready(function(){
+
+//front-end
+
+
+$("form#pizza-form").submit(function(event) {
+  event.preventDefault();
+
+  var inputedSizeOfPizza =parseInt($("#dropdown").children("option").filter(":selected").val())
+  var userSelectedCrust=parseInt($("input[name='crust']:checked").val());
+  //Access the selected toppings and put them in an array
+  var toppings=[];
+  var userTotalToppingCost=0;
+  $("input[name='toppings']:checked").each(function(){            
+    toppings.push(parseInt(($(this).val())));
+   
+    // toppings.forEach(topping=> totalToppingCost =totalToppingCost+topping);
+    userTotalToppingCost=toppings.reduce((userTotalToppingCost,topping)=>userTotalToppingCost+topping);
+    
+});
+  var delivaryBool=$("input[name='delivary']:checked").val();
+  var inputedNumberOfPizzas=parseInt($("input#how-many").val());
+  var locationName=$("input#locationName").val();
+  var newLocation="";
+  
+
+   //create a new object
+   var newPizza= new PizzaPriceCalc(inputedSizeOfPizza,userSelectedCrust,userTotalToppingCost,inputedNumberOfPizzas);
+   var newPrice=newPizza.pizzaPrice();
+   function askDelivary(){
+    if(delivaryBool==="true"){
+      newLocation=prompt("Enter the location for delivary");
+    }else{
+      return false;
+    }
+ 
+   }
+   askDelivary()
+
+
+
+  $("ul#totalCost").append("<li><span class='contact'>" + newLocation + " "+ "</span></li>");
+  console.log(newPrice)
   
 });
 
