@@ -9,12 +9,12 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/poca.css">
     <link rel="stylesheet" href="css/order.css">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Emilys+Candy|Faster+One|Marck+Script|Metrophobic|Mukta+Mahee|Pinyon+Script|Playball|Rancho|Share|Teko|Vast+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Emilys+Candy|Faster+One|Lobster+Two|Marck+Script|Metrophobic|Mukta+Mahee|Pinyon+Script|Playball|Rancho|Share|Teko|Vast+Shadow&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
-  <title>Document</title>
+  <title>Pocadetro Pizza App</title>
 </head>
 <body>
   <div class="container-fluid">
@@ -24,78 +24,122 @@
     
             <a href="index.html">Home</a>
             <a href="#">App</a>
-            <a href="imageo.html">Images</a>
+            <a href="imageo.html">Menu</a>
             <a href="#">services</a>
             <a href="#">Contacts</a>
             
     
           </div>
-          <h1 class="text-center container-fluid" id="pocad">PODECATRO PIZZA</h1>
+          <h1 class="text-center container-fluid" id="pocad">PODECATRO PIZZA APP</h1>
       </div>
-      <div class=" form-group bg-white "> 
-        <form action="" id="pizza-form" class="form-group " >
-          <p>Order your pizza the way you like it</p>
-          <label for "#firstName" class="form-check-label"> First Name:
-            <input id = "firstName" type = "text" required placeholder = "Your first name">
-          </label>
-            <br>
-          <label for "#firstName"> Last Name:
-            <input id = "lastName" type = "text" required placeholder = "Your last name">
-          </label>
-               <br>
-          <label for "#email-add"> Email Address:
-            <input id = "email-add" type = "mail" required placeholder = "Enter a valid email address">
-          </label>
-             <br>
-          <label style = "margin-left:5px;" for "#dropdown">Select the size of pizza
-            <select id = "dropdown">
-              <option value = "0">--Large sized Pizza--</option>
-              <option value = "1"> medium sized pizza</option>
-              <option value = "2">Small sized pizza</option>
-         
-           </select>
-          </label>
-          <div class="crustRadio">
-            <label for="crispy"><input type="radio" class= "radio-inline pad-l" id="crispy"  name="crust"  width="100%" >Thin crust @ 250/=</label>
-            <label for="stuffed"><input type="radio" class= "radio-inline pad-l" id="stuffed"  name="crust" >stuffed crust @ 150/=</label><br>
-            <label for="gluten"><input type="radio" class= "radio-inline pad-l" id="gluten"  name="crust" >Gluten free @ 150/=</label>
-            <label for="thick"><input type="radio" class= "radio-inline pad-l" id="thick"  name="crust" >Thick crust @ 350/=</label><br>
-            <label for="crispy"><input type="radio" class= "radio-inline pad-l" id="crispy"  name="crust" >Crispy crust @ 150/=</label>
-            <label for="deep"><input type="radio" class= "radio-inline pad-l" id="deep"  name="crust" >Deep crust @ 250/=</label>
-          
-
-          </div>
-          <div class="toppings">
-              <br>
-              <label for "toppings">Select the toppings that you prefer(Check all that you like)<br>
-               <input type = "checkbox" class="pad-l" name = "toppings" >Bacon pizza<br>
-              <input type = "checkbox" class="pad-l" name = "toppings" >Extra cheese<br>
-              <input type = "checkbox" class="pad-l" name = "toppings" >Green peppers<br>
-              <input type = "checkbox" class="pad-l" name = "toppings" >Black olives <br>
-              <input type = "checkbox" class="pad-l" name = "toppings" >Sausages<br>
-              <input type = "checkbox" class="pad-l" name = "toppings" >Pepperoni<br>
-              <input type = "checkbox" class="pad-l" name = "toppings" >Mushroom<br>
-              <input type = "checkbox" class="pad-l" name = "toppings" >Onions<br>
-
-              </label>
-              <br>
-
-          </div>
-          <div class="delivary">
-              <br>
-              <label for "delivary">Would you like the pizza to be deliverd?<br>
-                <input type = "checkbox" class="pad-l" name = "delivary" >Yes<br>
-                <input type = "checkbox" class="pad-l" name = "delivary" >No<br>
-              </label>
-              <br>
-              <label for "#locationName" class="form-check-label"> If 'Yes', Enter your location:
-                  <input id = "locationName" type = "text" required placeholder = "Location for delivary">
-              </label>
-
-          </div>
-        </form>
-
+      <div class="app-wrap">
+          <div class=" form-group text-white "> 
+              <form action="" id="pizza-form" class=" " >
+                <h2 class=" text-info">Order your pizza the way you like it</h2>
+                <label for "#firstName" class="form-check-label"> First Name:</label>
+                  <div class="trio">
+                      <input id = "firstName" type = "text" required placeholder = "Your first name" >
+                  </div>
+                  
+                
+                  <br>
+                  <label for "#firstName"> Last Name:</label>
+                  <div class="trio">
+                      <input id = "lastName" type = "text" required placeholder = "Your last name" sze="8">
+                  </div>
+                
+                  
+                
+                     <br>
+                <label for "#email-add"> Email Address:</label>
+                <div class="trio">
+                    <input id = "email-add" type = "mail" required placeholder = "Enter a valid email address">
+                </div>
+                  
+                
+                   <br>
+                <label style = "margin-left:5px;" for "#dropdown"><span class=" text-info"> Select the size of pizza</span></label>
+                <div class="trio">
+                    <select id = "dropdown">
+                        <option value = "0">--Large sized Pizza--</option>
+                        <option value = "1"> medium sized pizza</option>
+                        <option value = "2">Small sized pizza</option><br>
+                   
+                     </select>
+                </div>
+      
+                <br>
+                <label for "crusts"> <span class=" text-info">Select the type of crust that you prefer.</span><br></label>
+                <div class="crustRadio trio">
+                  <label for="crispy"><input type="radio" class= "radio-inline pad-l" id="crispy"  name="crust"  width="100%" >Thin crust @ 250/=</label><br>
+                  <label for="stuffed"><input type="radio" class= "radio-inline pad-l" id="stuffed"  name="crust" >stuffed crust @ 150/=</label><br>
+                  <label for="gluten"><input type="radio" class= "radio-inline pad-l" id="gluten"  name="crust" >Gluten free @ 150/=</label><br>
+                  <label for="thick"><input type="radio" class= "radio-inline pad-l" id="thick"  name="crust" >Thick crust @ 350/=</label><br>
+                  <label for="crispy"><input type="radio" class= "radio-inline pad-l" id="crispy"  name="crust" >Crispy crust @ 150/=</label><br>
+                  <label for="deep"><input type="radio" class= "radio-inline pad-l" id="deep"  name="crust" >Deep crust @ 250/=</label>
+                
+      
+                </div>
+                <div class="toppings">
+                    <br>
+                    
+                        <label for "toppings"> <span class=" text-info">Select the toppings that you prefer(Check all that you like)</span><br></label>
+                    
+                  <div class="trio">
+                     <input type = "checkbox" class="pad-l" name = "toppings" >Bacon pizza<br>
+                    <input type = "checkbox" class="pad-l" name = "toppings" >Extra cheese<br>
+                    <input type = "checkbox" class="pad-l" name = "toppings" >Green peppers<br>
+                    <input type = "checkbox" class="pad-l" name = "toppings" >Black olives <br>
+                    <input type = "checkbox" class="pad-l" name = "toppings" >Sausages<br>
+                    <input type = "checkbox" class="pad-l" name = "toppings" >Pepperoni<br>
+                    <input type = "checkbox" class="pad-l" name = "toppings" >Mushroom<br>
+                    <input type = "checkbox" class="pad-l" name = "toppings" >Onions<br>
+                  </div>
+                    
+                    <br>
+      
+               
+                <label for "#how-many"> Enter the number of pizza: </label>
+                <div class="trio">
+                   
+                        <input id = "how-many" type = "number" required placeholder = "How many pizza do you want?"">
+                    
+      
+                </div>
+                
+                <br>
+                <label for "delivary" class="bg-black"><span class=" text-info">Would you like the pizza to be deliverd?</span></label><br>
+                <div class="trio">
+                    <input type = "checkbox" class="trio" name = "delivary" >Yes<br>
+                    <input type = "checkbox" class="trio" name = "delivary" >No<br>
+                </div>
+      
+                   
+                    <br>
+                    <label for "#locationName" class="form-check-label"> If <span class="text-info">'Yes'</span>, Enter your location:</label>
+                    <div class="trio">
+                        <input id = "locationName" type = "text" required placeholder = "Location for delivary">
+                    </div>
+                       
+                    
+      
+               
+                <br>
+                <label for "#comments" class="text-info">Any suggestions or comments?  </label><br>
+                <textarea rows="4" cols="40" id = "comments">
+                
+                </textarea>
+              
+                <br>
+                <div class="subm">
+                    <input type = "submit" value = "submit" class="btn btn-primary">
+                </div>
+               
+              </form>
+      
+            </div>
       </div>
+      
     
   </div>
   

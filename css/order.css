@@ -1,9 +1,58 @@
-.form-group{
-  width:600px;
-  background-color:white;
-  margin:auto;
-  font-size:26px;
-}
+
 body{
-  background-color: aqua;
+ 
+background-image: url("http://www.delonghi.com/Global/recipes/multifry/pizza_fresca.jpg");
+background-repeat:round;
+
+margin-top:40px;
+}
+.form-group{
+
+
+  margin:auto;
+
+  background-image:radial-gradient(circle,#000000,#9a0eeb);
+  border-style:solid;
+  padding-left:15%;
+}
+.text-info{
+  width:100%;
+  font-family: 'Lobster Two', cursive;
+  font-weight: 800;
+  font-size:30px;
+  color:white;
+}
+.subm{
+  padding-left:50%;
+}
+.app-wrap{
+  width:720px;
+  margin:auto;
+  opacity:0.8;
+}
+
+#pizza-form label{
+  font-weight: 400;
+  font-size: 22px;
+}
+checkboxes{
+  padding-left:20%;
+  background-color:blue;
+}
+.trio{
+  padding-left:10%;
+}
+@media(max-width:576px){
+  .form-group{
+    padding-left:2%;
+  }
+
+}
+@media(max-width:720px){
+  textarea{
+    width:90%;
+  }
+  .app-wrap{
+    width:100%;
+  }
 }
