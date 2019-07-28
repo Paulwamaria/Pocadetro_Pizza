@@ -21,9 +21,10 @@ $("form#pizza-form").submit(function(event) {
 });
   var delivaryBool=$("input[name='delivary']:checked").val();
   var numberOfPizzas=$("input#how-many").val();
+  var locationName=$("input#locationName").val();
   
 
-  $("ul#totalCost").append("<li><span class='contact'>" + numberOfPizzas + " hi"+ "</span></li>");
+  $("ul#totalCost").append("<li><span class='contact'>" + locationName + " hi"+ "</span></li>");
 
 
 });
