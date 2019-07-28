@@ -89,6 +89,7 @@ $("form#pizza-form").submit(function(event) {
       newPrice=newPizza.pizzaPrice();
       if(delivaryBool==="true"){
          totalCost= newPrice + costOfDelivary;
+         $("ul#totalCost").append("<li><span class='contact'>" +"You requested for delivary at location " +newLocation + " at a fixed charge of "+costOfDelivary+ " ksh"+"</span></li>"); 
       }else{
         totalCost=newPrice;
       }
@@ -102,7 +103,8 @@ $("form#pizza-form").submit(function(event) {
 
      $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +toppingNames + "ksh"+"</span></li>");  
   $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +inputedSizeName + " pizza @ "+inputedSizeOfPizza+ "ksh"+"</span></li>");
-  $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +selectedCrustName + " pizza @ "+userSelectedCrust+ "ksh"+"</span></li>");
+  $("ul#totalCost").append("<li><span class='contact'>" +"You orderd " +inputedNumberOfPizzas +" "+inputedSizeName+" pizza @ "+inputedSizeOfPizza+ "ksh"+"</span></li>"); 
+  $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +selectedCrustName + " crust type @ "+userSelectedCrust+ "ksh"+"</span></li>");
   $("ul#totalCost").append("<li><span class='contact'>" +"Total cost is: "+ totalCost+ " "+ "ksh"+"</span></li>");
  
   
