@@ -1,8 +1,12 @@
 
 body{
+  background-image:linear-gradient(circle,#000000,#9a0eeb);
+  background-color: #000000;
+}
+.jumbotron{
  
 background-image: url("http://www.delonghi.com/Global/recipes/multifry/pizza_fresca.jpg");
-background-repeat:round;
+background-repeat:no-repeat;
 
 margin-top:40px;
 }
@@ -20,7 +24,16 @@ margin-top:40px;
   font-family: 'Lobster Two', cursive;
   font-weight: 800;
   font-size:30px;
-  color:white;
+ 
+}
+.text-black{
+  width:100%;
+  font-family: 'Lobster Two', cursive;
+  font-weight: 800;
+  font-size:30px;
+  color:black;
+  margin-top:3%;
+
 }
 .subm{
   padding-left:50%;

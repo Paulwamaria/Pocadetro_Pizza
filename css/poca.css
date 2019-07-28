@@ -12,7 +12,7 @@ body{
 .jumbotron{
 margin:auto;
 
-  background-image:radial-gradient(circle,#f75515,#9a0eeb);
+  background-image:radial-gradient(circle,#000000,#9a0eeb);
 }
 .jumbotron a{
   

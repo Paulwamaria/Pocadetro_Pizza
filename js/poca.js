@@ -2,8 +2,10 @@
 var costBySize;
 var costOfCrust;
 var costOfToppings;
-var costOfDelivary;
+var costOfDelivary=250;
 var numberOfPizzas;
+var newPrice;
+var totalCost=0;
 
   //create constructors
   //back-end
@@ -45,9 +47,8 @@ $("form#pizza-form").submit(function(event) {
   var newLocation="";
   
 
-   //create a new object
-   var newPizza= new PizzaPriceCalc(inputedSizeOfPizza,userSelectedCrust,userTotalToppingCost,inputedNumberOfPizzas);
-   var newPrice=newPizza.pizzaPrice();
+ 
+   //delivary options
    function askDelivary(){
     if(delivaryBool==="true"){
       newLocation=prompt("Enter the location for delivary");
@@ -58,10 +59,25 @@ $("form#pizza-form").submit(function(event) {
    }
    askDelivary()
 
+     //create a new object
+
+     //findindig the overall cost
+     function fullCost(){
+      var newPizza= new PizzaPriceCalc(inputedSizeOfPizza,userSelectedCrust,userTotalToppingCost,inputedNumberOfPizzas);
+      newPrice=newPizza.pizzaPrice();
+      if(delivaryBool==="true"){
+         totalCost= newPrice + costOfDelivary;
+      }else{
+        totalCost=newPrice;
+      }
+      return totalCost;
+     }
+     fullCost();
 
 
-  $("ul#totalCost").append("<li><span class='contact'>" + newLocation + " "+ "</span></li>");
-  console.log(newPrice)
+
+  $("ul#totalCost").append("<li><span class='contact'>" + totalCost+ " "+ "ksh"+"</span></li>");
+  console.log(totalCost)
   
 });
 

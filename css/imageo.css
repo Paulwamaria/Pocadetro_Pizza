@@ -1,7 +1,9 @@
 img{
-  width:300px;
-  height:200px;
-  border-radius:
+  width:400px;
+  height:300px;
+  border-radius:2px;
+  border-style: solid;
+  border-color:blue;
 }
 #logo{
   width:100px;
@@ -9,12 +11,35 @@ img{
   border-radius:50%;
 }
 .card{
-  background-color:lavenderblush;
+  margin-top:10px;
+  background-image:radial-gradient(circle,#000000,#9a0eeb);
 }
 h1{
   font-family:"Kreon",serif;
 }
 h2{
   font-family:"Caveat",cursive;
+}
+h3{
+  font-family: 'Bungee Inline', cursive;
+  font-weight: 500;
+  font-size:40px;
+  color:white;
+  margin-top:10px;
+}
+h4{
+  background-color:black;
+  color:blue;
+ 
+}
+figcaption{
+  font-size:22px;
+  color:white;
+  text-align: center;
+}
+ol li{
+margin-left:30%;
+float:left;
+
 }
 

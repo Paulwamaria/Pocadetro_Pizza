@@ -61,9 +61,9 @@
                 <label style = "margin-left:5px;" for "#dropdown"><span class=" text-info"> Select the size of pizza</span></label>
                 <div class="trio">
                     <select id = "dropdown">
-                        <option value = "0">--Large sized Pizza--</option>
-                        <option value = "1"> medium sized pizza</option>
-                        <option value = "2">Small sized pizza</option><br>
+                        <option value = "1000">large</option>
+                        <option value = "500"> medium</option>
+                        <option value = "300">Small</option><br>
                    
                      </select>
                 </div>
@@ -71,12 +71,12 @@
                 <br>
                 <label for "crusts"> <span class=" text-info">Select the type of crust that you prefer.</span><br></label>
                 <div class="crustRadio trio">
-                  <label for="crispy"><input type="radio" class= "radio-inline pad-l" id="crispy"  name="crust"  width="100%" >Thin crust </label><br>
-                  <label for="stuffed"><input type="radio" class= "radio-inline pad-l" id="stuffed"  name="crust" >stuffed crust </label><br>
-                  <label for="gluten"><input type="radio" class= "radio-inline pad-l" id="gluten"  name="crust" >Gluten free </label><br>
-                  <label for="thick"><input type="radio" class= "radio-inline pad-l" id="thick"  name="crust" >Thick crust </label><br>
-                  <label for="crispy"><input type="radio" class= "radio-inline pad-l" id="crispy"  name="crust" >Crispy crust </label><br>
-                  <label for="deep"><input type="radio" class= "radio-inline pad-l" id="deep"  name="crust" >Deep crust </label>
+                  <label for="thin"><input type="radio" value="150" class= "radio-inline pad-l" id="thin"  name="crust"  width="100%" >Thin crust </label><br>
+                  <label for="stuffed"><input type="radio" value="200" class= "radio-inline pad-l" id="stuffed"  name="crust" >stuffed crust </label><br>
+                  <label for="gluten"><input type="radio" value="350" class= "radio-inline pad-l" id="gluten"  name="crust" >Gluten free </label><br>
+                  <label for="thick"><input type="radio" value="350" class= "radio-inline pad-l" id="thick"  name="crust" >Thick crust </label><br>
+                  <label for="crispy"><input type="radio" value="150" class= "radio-inline pad-l" id="crispy"  name="crust" >Crispy crust </label><br>
+                  <label for="deep"><input type="radio" value="250" class= "radio-inline pad-l" id="deep"  name="crust" >Deep crust </label>
                 
       
                 </div>
@@ -86,14 +86,15 @@
                         <label for "toppings"> <span class=" text-info">Select the toppings that you prefer(Check all that you like)</span><br></label>
                     
                   <div class="trio">
-                     <input type = "checkbox" class="pad-l" name = "toppings" >Bacon pizza<br>
-                    <input type = "checkbox" class="pad-l" name = "toppings" >Extra cheese<br>
-                    <input type = "checkbox" class="pad-l" name = "toppings" >Green peppers<br>
-                    <input type = "checkbox" class="pad-l" name = "toppings" >Black olives <br>
-                    <input type = "checkbox" class="pad-l" name = "toppings" >Sausages<br>
-                    <input type = "checkbox" class="pad-l" name = "toppings" >Pepperoni<br>
-                    <input type = "checkbox" class="pad-l" name = "toppings" >Mushroom<br>
-                    <input type = "checkbox" class="pad-l" name = "toppings" >Onions<br>
+                     <input type = "checkbox" value="80" class="pad-l" name = "toppings" >Bacon<br>
+                    <input type = "checkbox" value="150" class="pad-l" name = "toppings" >Extra Cheese<br>
+                    <input type = "checkbox" value="50" class="pad-l" name = "toppings" >Green Peppers<br>
+                    <input type = "checkbox" value="200" class="pad-l" name = "toppings" >Black Olives <br>
+                    <input type = "checkbox" value="40" class="pad-l" name = "toppings" >Sausages<br>
+                    <input type = "checkbox" value="200" class="pad-l" name = "toppings" >Pepperoni<br>
+                    <input type = "checkbox" value="200" class="pad-l" name = "toppings" >Mushroom<br>
+                    <input type = "checkbox" value="100" class="pad-l" name = "toppings" >Omelete<br>
+                    <input type = "checkbox" value="50" class="pad-l" name = "toppings" >Onions<br>
                   </div>
                     
                     <br>
@@ -110,16 +111,16 @@
                 <br>
                 <label for "delivary" class="bg-black"><span class=" text-info">Would you like the pizza to be deliverd?</span></label><br>
                 <div class="trio">
-                    <input type = "checkbox" class="trio" name = "delivary" >Yes<br>
-                    <input type = "checkbox" class="trio" name = "delivary" >No<br>
+                    <input type = "radio" value="true" class="trio" name = "delivary" >Yes<br>
+                    <input type = "radio" value="false" class="trio" name = "delivary" >No<br>
                 </div>
       
                    
-                    <br>
-                    <label for "#locationName" class="form-check-label"> If <span class="text-info">'Yes'</span>, Enter your location:</label>
+                    <!-- <br> -->
+                    <!-- <label for "#locationName" class="form-check-label"> If <span class="text-info">'Yes'</span>, Enter your location:</label>
                     <div class="trio">
                         <input id = "locationName" type = "text" placeholder = "Location for delivary">
-                    </div>
+                    </div> -->
                        
                     
       
@@ -137,8 +138,8 @@
                
               </form>
               <div class="output">
-                  <h2>Contacts:</h2>
-                  <ul id="contacts">
+                  <h2>Receipt:</h2>
+                  <ul id="totalCost">
         
                   </ul>
 
