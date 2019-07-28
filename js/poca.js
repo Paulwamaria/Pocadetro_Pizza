@@ -14,13 +14,15 @@ $("form#pizza-form").submit(function(event) {
 
   var sizeOfPizza = $("#dropdown").children("option").filter(":selected").text()
   var selectedCrust=$("input[name='crust']:checked").val();
+  //Access the selected toppings and put them in an array
   var toppings=[];
   $.each($("input[name='toppings']:checked"), function(){            
     toppings.push($(this).val());
 });
+  var delivaryBool=$("input[name='delivary']:checked").val();
   
 
-  $("ul#totalCost").append("<li><span class='contact'>" + toppings + " hi"+ "</span></li>");
+  $("ul#totalCost").append("<li><span class='contact'>" + delivaryBool + " hi"+ "</span></li>");
 
 
 });
