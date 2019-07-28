@@ -34,11 +34,12 @@ $("form#pizza-form").submit(function(event) {
 
   //create constructors
   //back-end
-  // function pizzaPriceCalc(costBySize,costOfCrust,costOfToppings,costOfDelivary,numberOfPizzas){
-  //   this.sizeOfPizza:costBySize,
-  //   this.selectedCrust:costOfCrust,
-  //   this.
-  // }
+  function pizzaPriceCalc(costBySize,costOfCrust,costOfToppings,numberOfPizzas){
+    this.sizeOfPizza=costBySize,
+    this.selectedCrust=costOfCrust,
+    this.totalToppingCost=costOfToppings,
+    this.numberOfPizzas=numberOfPizzas;
+  }
   
 });
 
