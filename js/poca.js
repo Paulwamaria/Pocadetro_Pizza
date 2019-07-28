@@ -22,8 +22,7 @@ $("form#pizza-form").submit(function(event) {
    
     // toppings.forEach(topping=> totalToppingCost =totalToppingCost+topping);
     totalToppingCost=toppings.reduce((totalToppingCost,topping)=>totalToppingCost+topping);
-
-
+    
 });
   var delivaryBool=$("input[name='delivary']:checked").val();
   var numberOfPizzas=$("input#how-many").val();
@@ -34,15 +33,17 @@ $("form#pizza-form").submit(function(event) {
 
   //create constructors
   //back-end
-  function pizzaPriceCalc(costBySize,costOfCrust,costOfToppings,numberOfPizzas){
+  function PizzaPriceCalc(costBySize,costOfCrust,costOfToppings,numberOfPizzas){
     this.sizeOfPizza=costBySize,
     this.selectedCrust=costOfCrust,
     this.totalToppingCost=costOfToppings,
     this.numberOfPizzas=numberOfPizzas;
   }
+  //create a prototype
+  PizzaPriceCalc.prototype.pizzaPrice=function(){
+    return this.numberOfPizzas*(this.sizeOfPizza + this.selectedCrust + this.totalToppingCost);
+  }
   
 });
 
-}
-
-);
+});
