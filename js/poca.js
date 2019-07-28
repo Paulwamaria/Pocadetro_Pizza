@@ -14,9 +14,13 @@ $("form#pizza-form").submit(function(event) {
 
   var sizeOfPizza = $("#dropdown").children("option").filter(":selected").text()
   var selectedCrust=$("input[name='crust']:checked").val();
+  var toppings=[];
+  $.each($("input[name='toppings']:checked"), function(){            
+    toppings.push($(this).val());
+});
   
 
-  $("ul#totalCost").append("<li><span class='contact'>" + selectedCrust + " hi"+ "</span></li>");
+  $("ul#totalCost").append("<li><span class='contact'>" + toppings + " hi"+ "</span></li>");
 
 
 });
