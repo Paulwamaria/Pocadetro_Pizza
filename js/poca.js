@@ -57,7 +57,7 @@ $("form#pizza-form").submit(function(event) {
  //Get the tooping names
  $("input[name='toppings']:checked").each(function(){
   var idValue = $(this).attr("id");
-  toppingNames.push($("label[for='"+idValue+"']").text() +" topping @ "+ parseInt(($(this).val())) );
+  toppingNames.push($("label[for='"+idValue+"']").text() );
  });
 //  toppingNames.forEach(function(toppingName){
 //   $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +toppingNames + "ksh"+"</span></li>");
@@ -101,11 +101,11 @@ $("form#pizza-form").submit(function(event) {
      //display output
      $(".output").show();
 
-     $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +toppingNames + "ksh"+"</span></li>");  
-  $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +inputedSizeName + " pizza @ "+inputedSizeOfPizza+ "ksh"+"</span></li>");
-  $("ul#totalCost").append("<li><span class='contact'>" +"You orderd " +inputedNumberOfPizzas +" "+inputedSizeName+" pizza @ "+inputedSizeOfPizza+ "ksh"+"</span></li>"); 
-  $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +selectedCrustName + " crust type @ "+userSelectedCrust+ "ksh"+"</span></li>");
-  $("ul#totalCost").append("<li><span class='contact'>" +"Total cost is: "+ totalCost+ " "+ "ksh"+"</span></li>");
+     $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +toppingNames+"</span></li>");  
+  // $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +inputedSizeName  +"</span></li>");
+  $("ul#totalCost").append("<li><span class='contact'>" +"You orderd " + inputedNumberOfPizzas +" "+ inputedSizeName +""  + "</span></li>"); 
+  $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +selectedCrustName + "</span></li>");
+  $("ul#totalCost").append("<li><span class='contact'>" +"Total cost is: "+ totalCost+ " "+"</span></li>");
  
   
 });
