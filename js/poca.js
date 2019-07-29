@@ -105,7 +105,7 @@ $("form#pizza-form").submit(function(event) {
   // $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +inputedSizeName  +"</span></li>");
   $("ul#totalCost").append("<li><span class='contact'>" +"You orderd " + inputedNumberOfPizzas +" "+ inputedSizeName +""  + "</span></li>"); 
   $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +selectedCrustName + "</span></li>");
-  $("ul#totalCost").append("<li><span class='contact'>" +"Total cost is: "+ totalCost+ " "+"</span></li>");
+  $("ul#totalCost").append("<li><span class='contact'>" +"Total cost is ksh: "+ totalCost+ " "+"</span></li>");
  
   
 });

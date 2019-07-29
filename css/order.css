@@ -71,4 +71,9 @@ checkboxes{
 }
 .output{
   display:none;
+  background-color:white;
+  width:80%;
+}
+.output h2{
+  font-size:40px;
 }
