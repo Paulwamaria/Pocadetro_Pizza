@@ -1,59 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-  
-    <script src=js/poca.js></script>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/poca.css">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Emilys+Candy|Faster+One|Marck+Script|Metrophobic|Mukta+Mahee|Pinyon+Script|Playball|Rancho|Share|Teko|Vast+Shadow&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Pocadetro pizza</title>
+  <title>Pocadetro Pizza | Fresh Handmade Pizza</title>
+  <meta name="description" content="Order fresh Pocadetro Pizza with your choice of crust, size, toppings, and delivery.">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/poca.css">
 </head>
-<body>
-  <div class="container-fluid text-center "></div>
-    <div class= " " id = "home">
-      <div class="jumbotron legend text-center">
-          <img src="images/Emryon01-g.png" alt="logo" class="legend text-center" id ="logo">
-          <div class="navbar   navbar-brand legend text-center bg-black">
-    
-            <a href="#">Home</a>
-            <a href="order.html">App</a>
-            <a href="imageo.html">Menu</a>
-         
-            <a href="#">Contacts</a>
-            
-    
-          </div>
-          <h1 class="text-center container-fluid" id="pocad">PODECATRO PIZZA</h1>
-      </div>
-      <!-- main content -->
-      <div  class=" main-content position-relative">
-        <img src="images/Pizzabgjpg" alt="pizza" class="">
-        <div class="position-absolute orderview" id="p-order">
-          <a href="order.html">ORDER PIZZA!</a>
+<body class="home-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Pocadetro Pizza home">
+      <img src="images/Emryon01-g.png" alt="" class="brand-mark">
+      <span>Pocadetro Pizza</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="imageo.html">Menu</a>
+      <a href="order.html">Order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Handmade daily in Nairobi</p>
+        <h1 id="hero-title">Fresh pizza, built exactly how you like it.</h1>
+        <p class="hero-copy">
+          Choose your size, crust, toppings, and delivery option in minutes. Pocadetro serves hot, generous pizza for quick lunches, family dinners, and late cravings.
+        </p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a class="button button-primary" href="order.html">Order Now</a>
+          <a class="button button-secondary" href="imageo.html">View Menu</a>
         </div>
-        <div class="position-absolute orderview" id="p-choices">
-         <a href="imageo.html"> VIEW CHOICES</a>
-        </div>
-
       </div>
+    </section>
 
+    <section class="features" aria-label="What Pocadetro offers">
+      <article>
+        <span class="feature-kicker">01</span>
+        <h2>Choose Your Crust</h2>
+        <p>Thin, crispy, stuffed, deep, gluten free, and thick crust options are ready for every order.</p>
+      </article>
+      <article>
+        <span class="feature-kicker">02</span>
+        <h2>Load The Toppings</h2>
+        <p>Add bacon, pepperoni, mushrooms, onions, extra cheese, olives, peppers, and more.</p>
+      </article>
+      <article>
+        <span class="feature-kicker">03</span>
+        <h2>Pickup Or Delivery</h2>
+        <p>Place your order online and choose whether you want it delivered or prepared for pickup.</p>
+      </article>
+    </section>
 
+    <section class="menu-preview" aria-labelledby="menu-preview-title">
+      <div>
+        <p class="eyebrow">Popular starting points</p>
+        <h2 id="menu-preview-title">Start with a size, then make it yours.</h2>
+      </div>
+      <div class="menu-cards">
+        <article>
+          <p class="price">Ksh 300</p>
+          <h3>Small Pizza</h3>
+          <p>Best for one person or a quick snack.</p>
+        </article>
+        <article>
+          <p class="price">Ksh 500</p>
+          <h3>Medium Pizza</h3>
+          <p>A balanced choice for sharing or a filling meal.</p>
+        </article>
+        <article>
+          <p class="price">Ksh 1000</p>
+          <h3>Large Pizza</h3>
+          <p>Made for groups, families, and serious appetites.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div>
+      <strong>Pocadetro Pizza</strong>
+      <p>Fresh pizza made to order.</p>
     </div>
-
-    <div class="footr text-center ">
-        <p>Copyright (c) 2019 Paulwamaria</p>
-        <p>Pocadetro pizza</p>
-        <a href="email">paulwamaria@gmail.com</a>
-      
-    </div>
-
-
-  </div>
+    <a href="mailto:paulwamaria@gmail.com">paulwamaria@gmail.com</a>
+    <p>Copyright &copy; 2026 Pocadetro Pizza</p>
+  </footer>
 </body>
 </html>
