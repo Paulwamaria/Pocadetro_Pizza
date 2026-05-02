@@ -2,6 +2,8 @@
 
 Pocadetro Pizza is a static pizza ordering website. Customers can review the menu, customize a pizza order, choose pickup or delivery, and see a calculated receipt total.
 
+> > Its a simple pizza project from Moringa School.
+
 ## Live Site
 
 https://paulwamaria.github.io/Pocadetro_Pizza/
