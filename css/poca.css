@@ -49,8 +49,9 @@ img {
   gap: 24px;
   min-height: 78px;
   padding: 14px clamp(18px, 5vw, 72px);
-  background: rgba(255, 248, 239, 0.94);
-  border-bottom: 1px solid var(--line);
+  background: linear-gradient(90deg, #fff8ef 0%, #fff2df 45%, #ffe0c2 100%);
+  border-bottom: 3px solid var(--tomato);
+  box-shadow: 0 10px 28px rgba(45, 30, 18, 0.08);
   backdrop-filter: blur(16px);
 }
 
@@ -82,21 +83,22 @@ img {
   align-items: center;
   justify-content: flex-end;
   gap: clamp(12px, 3vw, 28px);
-  color: var(--muted);
+  color: var(--ink);
   font-size: 0.95rem;
   font-weight: 700;
 }
 
 .site-nav a {
-  border-bottom: 2px solid transparent;
-  padding: 8px 0;
+  border-radius: 999px;
+  padding: 8px 13px;
   text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
 }
 
 .site-nav a:hover,
 .site-nav a[aria-current="page"] {
-  color: var(--tomato-dark);
-  border-color: var(--tomato-dark);
+  color: #fff;
+  background: var(--tomato);
 }
 
 .hero {
