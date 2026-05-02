@@ -13,6 +13,20 @@ https://paulwamaria.github.io/Pocadetro_Pizza/
 - `order.html` - order form with receipt calculation.
 - `contact.html` - contact and support page.
 
+## Screenshots
+
+### Homepage
+
+![Homepage screenshot](screenshots/homepage.png)
+
+### Menu
+
+![Menu page screenshot](screenshots/menu.png)
+
+### Order
+
+![Order page screenshot](screenshots/order.png)
+
 ## Features
 
 - Responsive restaurant-style layout.
