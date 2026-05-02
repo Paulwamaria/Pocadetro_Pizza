@@ -1,174 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-  
-    <script src=js/poca.js></script>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/poca.css">
-    <link rel="stylesheet" href="css/imageo.css">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Emilys+Candy|Faster+One|Marck+Script|Metrophobic|Mukta+Mahee|Pinyon+Script|Playball|Rancho|Share|Teko|Vast+Shadow&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Pocadetro Pizza Menu</title>
+  <meta name="description" content="View Pocadetro Pizza sizes, crusts, toppings, and starting prices.">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/poca.css">
+  <link rel="stylesheet" href="css/imageo.css">
 </head>
-<body>
-  <div class="container-fluid">
-      <div class="jumbotron legend text-center">
-          <!-- <img src="images/Emryon01-g.png" alt="logo" class="legend text-center" id ="logo"> -->
-          <div class="navbar   navbar-brand legend text-center bg-black">
-    
-            <a href="index.html">Home</a>
-            <a href="order.html">App</a>
-            <a href="imageo.html">Menu</a>
-            <a href="#">services</a>
-            <a href="#">Contacts</a>
-            
-    
-          </div>
-          <h1 CLASS="text-center " id="pocad">PODECATRO PIZZA MENU</h1>
-      </div>
-      <!-- pizza images -->
-      <div class="card">
-        <div class="text-center"><h3>WHAT WE OFFER</h3></div>
-        <div class="size-intro text-center text-white">
-            <H4>SIZE</H4>
-            <P>
-              Here at Pocadetro pizza, we offer differrennt sizes depending on how much you are willing to spend.
-               There are three categories when it comes to piza sizes: <span class="!important"> small, medium  and large</span>. The diferrence is determined by the 
-               diameter of the pizza. For instance, a small pizza has a diameter of 10 centimeters, a medium sized pizza has a diameter of 14 centimeters while a large 
-               pizza has a diameter of 20 centimeters; Note that the exact price of a given pizza depends on your choices as you fill
-               the ordering form. The pice depends on:
-               <ol>
-                 <li>The size of the pizza</li><br>
-                 <li>The type of crust</li><br>
-                 <li>The type and number of toppings</li><br>
-                 <li>How many pizzas you want</li><br>
-                 <li>Whether you want the pizza deliverd</li>
-               </ol>
-    
-            </P>
-        </div>
-        <div  class="text-center text-white"><h4> Availabe sizes of pizza</h4></div>
-      <div class="d-inline-flex  flex-wrap justify-content-around">
-          <figure>
-              <img class="rounded" src="http://papamarios.com/wp-content/uploads/2014/03/2_small_pizzas.jpg">
-              <figcaption>small sized pizza <br>@300 ksh <br><a href="order.html">Place Order</a> </figcaption>
-          </figure>
-          <figure>
-              <img class="rounded" src="https://s3-media4.fl.yelpcdn.com/bphoto/ZHXqL8WDszEs-SLiSDnGQg/o.jpg">
-              <figcaption>medium sized pizza <br>@500 ksh <br><a href="order.html">Place Order</a> </figcaption> 
-          </figure>
-          <figure>
-              <img class="rounded" src="http://papa-chinos.com/wp-content/uploads/2018/05/Pizza.jpg">
-              <figcaption>Large sized pizza <br>@1000 ksh <br><a href="order.html">Place Order</a> </figcaption> 
-          </figure>
-      </div>
-      <div class="crust-intro text-center text-white">
-          <div class="text-center"><h4>Crust Type</h4></div>
-          <p>
-            We have three major categories when it comes to crust type. The indicated price is for a medium sized pizza plus crust cost:- 
-          </p>
-      </div>
-     
+<body class="menu-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Pocadetro Pizza home">
+      <img src="images/Emryon01-g.png" alt="" class="brand-mark">
+      <span>Pocadetro Pizza</span>
+    </a>
 
-      <div class="d-inline-flex  flex-wrap justify-content-around">
-          <figure>
-              <img class="rounded" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/8/23/0/FNM_100116-Thin-and-Crispy-Crust_s4x3.jpg.rend.hgtvcom.826.620.suffix/1480972864990.jpeg">
-              <figcaption>Crispy crusted pizza <br> @(500/= for pizza <br>+ 150/= for crust ) <br><a href="order.html">Place Order</a></figcaption>
-          </figure>
-          <figure>
-              <img class="rounded" src="https://amerikanisch-kochen.de/Wordpress/wp-content/uploads/2017/09/chicago-pizza.jpg">
-              <figcaption>stuffed pizza <br> @(500/= for pizza <br>+ 200/= for crust ) <br><a href="order.html">Place Order</a></figcaption>
-          </figure>
-          <figure>
-              <img  class="rounded" src="https://www.zliving.com/wp-content/uploads/2018/08/glutenfreepizzacrust.jpg">
-              <figcaption>Gluten free pizza<br> @(500/= for pizza <br>+ 200/= for crust ) <br><a href="order.html">Place Order</a></figcaption>
-              </figure>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="imageo.html" aria-current="page">Menu</a>
+      <a href="order.html">Order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu-intro" aria-labelledby="menu-title">
+      <div class="menu-intro-content">
+        <p class="eyebrow">Menu and pricing</p>
+        <h1 id="menu-title">Build a pizza that fits your appetite.</h1>
+        <p>
+          Start with a size, choose a crust, then add your favorite toppings. Final pricing is calculated on the order page based on your selections.
+        </p>
       </div>
-      <div class="d-inline-flex  flex-wrap justify-content-around">
-          <figure>
-              <img class="rounded" src="https://www.mastercook.com/app/Image/6650970/2274217.jpg">
-              <figcaption>Thick crusted pizza <br> @(500/= for pizza <br>+ 350/= for crust ) <br><a href="order.html">Place Order</a></figcaption>
-          </figure>
-          <figure>
-              <img class="rounded" src="https://blog.pizzahut.com/wp-content/uploads/2016/05/thincrust.jpg">
-              <figcaption>Thin crust pizza <br> @(500/= for pizza <br>+ 250/= for crust ) <br><a href="order.html">Place Order</a></figcaption>
-          </figure>
-          <figure>
-              <img  class="rounded" src="https://img.grouponcdn.com/iam/faZ3xFiU99BSnJQfbLpD/UK-5000x3000/v1/c700x420.jpg">
-              <figcaption>Deep crust pizza<br> @(500/= for pizza <br>+ 250/= for crust ) <br><a href="order.html">Place Order</a></figcaption>
-              </figure>
-      </div>
-      <div class="toppings-intro text-center text-white">
-          <div  class="text-center"><h4> Available Toppings</h4></div>
-          <p>
-            Here are the diferrent toppings we offer:- The price indicated is for a medium pizza plus the price of the toppings;
-          </p>
-      </div>
-      
-      <div class="d-inline-flex flex-wrap justify-content-around">
-          <figure>
-              <img  class="rounded"src="https://www.kunzler.com/wp-content/uploads/2015/08/ham-bacon-pizza.jpg">
-              <figcaption>bacon pizza <br> @(500/= for pizza <br>+ 80/= for bacon topping ) <br><a href="order.html">Place Order</a></figcaption>
-          </figure>
-          <figure>
-              <img class="rounded" src="https://craftriver.com/wp-content/uploads/2018/12/Plain-cheese-pizza-13k.jpg">
-              <figcaption>Extra cheese <br> @(500/= for pizza <br>+ 150/= for extra cheese ) <br><a href="order.html">Place Order</a></figcaption>
-          </figure>
-          <figure>
-              <img class="rounded" src="http://eatdefelice.com/wp-content/uploads/2015/07/Pizza-header-everything.jpg">
-              <figcaption>Green peppers <br> @(500/= for pizza <br>+ 50/= for green peppers ) <br><a href="order.html">Place Order</a></figcaption> 
-              </figure>
-      </div>
-      <div  class="text-center"><h4></h4></div>
-      <div class="d-inline-flex  flex-wrap justify-content-around">
-          <figure>
-              <img class="rounded" src="https://slice.seriouseats.com/images/2011/08/20110822-olives-poll-way-or-no-way.jpg">
-              <figcaption>black-olives pizza <br> @(500/= for pizza <br>+ 200/= for black olives ) <br><a href="order.html">Place Order</a></figcaption>
-          </figure>
-          <figure>
-              <img class="rounded" src="https://1.bp.blogspot.com/-2Wr4z7lif6o/UMc2cSbmXcI/AAAAAAAAWXs/NYQ23mEcNrM/s1600/papa_johns_five-sausage-pizza-01.JPG">
-              <figcaption>sausages <br> @(500/= for pizza <br>+ 40/= for sausages ) <br><a href="order.html">Place Order</a></figcaption> 
-          </figure>
-          <figure>
-              <img class="rounded" src="https://cdn.shopify.com/s/files/1/2215/3095/products/DSC_0250_2048x.jpg?v=1537460846">
-              <figcaption>pepperoni <br> @(500/= for pizza <br>+ 200/= for pepperoni ) <br><a href="order.html">Place Order</a></figcaption> 
-          </figure>
-      </div>
-      <div class="text-center"><h4></h4></div>
-      <div class="d-inline-flex  flex-wrap justify-content-around">
-          <figure>
-              <img class="rounded" src="https://img.taste.com.au/l42N-Ajs/w643-h428-cfill-q90/taste/2016/11/easy-cheesy-salami-and-mushroom-pizza-97042-1.jpeg">
-              <figcaption>Mushroom <br> @(500/= for pizza <br>+ 200/= for mushroom ) <br><a href="order.html">Place Order</a></figcaption>
-          </figure>
-          <figure>
-              <img class="rounded" src="https://cdn.pixabay.com/photo/2016/02/16/07/39/pizza-1202775__340.jpg">
-              <figcaption>omelet <br> @(500/= for pizza <br>+ 100/= for omelet ) <br><a href="order.html">Place Order</a></figcaption>
-          </figure>
-          <figure>
-              <img  class="rounded" src="https://img.sunset02.com/sites/default/files/grilled-four-onion-pizza-su.jpg">
-              <figcaption>onions <br> @(500/= for pizza <br>+ 50/= for onions ) <br><a href="order.html">Place Order</a></figcaption>
-              </figure>
-      </div>
-     
+      <a class="button button-primary" href="order.html">Start Order</a>
+    </section>
+
+    <section class="menu-section" aria-labelledby="sizes-title">
+      <div class="section-heading">
+        <p class="eyebrow">Pizza sizes</p>
+        <h2 id="sizes-title">Choose your base.</h2>
       </div>
 
+      <div class="menu-grid">
+        <article class="menu-item featured-item">
+          <p class="item-price">Ksh 300</p>
+          <h3>Small</h3>
+          <p>Best for one person, a light meal, or a quick snack.</p>
+          <a href="order.html">Order Small</a>
+        </article>
+        <article class="menu-item featured-item">
+          <p class="item-price">Ksh 500</p>
+          <h3>Medium</h3>
+          <p>A flexible choice for sharing or a satisfying solo meal.</p>
+          <a href="order.html">Order Medium</a>
+        </article>
+        <article class="menu-item featured-item">
+          <p class="item-price">Ksh 1000</p>
+          <h3>Large</h3>
+          <p>Built for families, groups, and bigger appetites.</p>
+          <a href="order.html">Order Large</a>
+        </article>
       </div>
-      
-      
-  </div>
-  <!-- footer -->
-  <div >
-    <div class="footer text-center  wrap">
-        <p>Copyright (c) 2019 Paulwamaria</p>
-        <p>Pocadetro pizza</p>
-        <a href="email">paulwamaria@gmail.com</a>
-      
+    </section>
+
+    <section class="menu-section menu-section-muted" aria-labelledby="crust-title">
+      <div class="section-heading">
+        <p class="eyebrow">Crust options</p>
+        <h2 id="crust-title">Pick the texture you want.</h2>
+      </div>
+
+      <div class="option-list">
+        <article>
+          <h3>Thin Crust</h3>
+          <p>Crisp, light, and easy to finish.</p>
+          <span>+ Ksh 150</span>
+        </article>
+        <article>
+          <h3>Crispy Crust</h3>
+          <p>A crunchy base with a classic bite.</p>
+          <span>+ Ksh 150</span>
+        </article>
+        <article>
+          <h3>Stuffed Crust</h3>
+          <p>Extra filling around the edge.</p>
+          <span>+ Ksh 200</span>
+        </article>
+        <article>
+          <h3>Deep Crust</h3>
+          <p>Thicker, fuller, and more filling.</p>
+          <span>+ Ksh 250</span>
+        </article>
+        <article>
+          <h3>Gluten Free Crust</h3>
+          <p>A gluten free option for selected orders.</p>
+          <span>+ Ksh 350</span>
+        </article>
+        <article>
+          <h3>Thick Crust</h3>
+          <p>Soft, hearty, and generous.</p>
+          <span>+ Ksh 350</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-section" aria-labelledby="toppings-title">
+      <div class="section-heading">
+        <p class="eyebrow">Toppings</p>
+        <h2 id="toppings-title">Finish it your way.</h2>
+      </div>
+
+      <div class="topping-table" role="list" aria-label="Available toppings">
+        <div role="listitem"><span>Bacon</span><strong>Ksh 80</strong></div>
+        <div role="listitem"><span>Extra Cheese</span><strong>Ksh 150</strong></div>
+        <div role="listitem"><span>Green Peppers</span><strong>Ksh 50</strong></div>
+        <div role="listitem"><span>Black Olives</span><strong>Ksh 200</strong></div>
+        <div role="listitem"><span>Sausage</span><strong>Ksh 40</strong></div>
+        <div role="listitem"><span>Pepperoni</span><strong>Ksh 200</strong></div>
+        <div role="listitem"><span>Mushrooms</span><strong>Ksh 200</strong></div>
+        <div role="listitem"><span>Omelette</span><strong>Ksh 100</strong></div>
+        <div role="listitem"><span>Onions</span><strong>Ksh 50</strong></div>
+      </div>
+    </section>
+
+    <section class="order-banner" aria-label="Place your order">
+      <div>
+        <p class="eyebrow">Ready to order?</p>
+        <h2>Customize your pizza and get the total instantly.</h2>
+      </div>
+      <a class="button button-primary" href="order.html">Order Pizza</a>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div>
+      <strong>Pocadetro Pizza</strong>
+      <p>Fresh pizza made to order.</p>
     </div>
-</div>
+    <a href="mailto:paulwamaria@gmail.com">paulwamaria@gmail.com</a>
+    <p>Copyright &copy; 2026 Pocadetro Pizza</p>
+  </footer>
 </body>
 </html>
