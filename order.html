@@ -1,156 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script    src="https://code.jquery.com/jquery-3.4.1.js"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Order Pocadetro Pizza</title>
+  <meta name="description" content="Customize and order Pocadetro Pizza online.">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/poca.css">
+  <link rel="stylesheet" href="css/order.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
-  
-    <script src=js/poca.js></script>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/poca.css">
-    <link rel="stylesheet" href="css/order.css">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Emilys+Candy|Faster+One|Lobster+Two|Marck+Script|Metrophobic|Mukta+Mahee|Pinyon+Script|Playball|Rancho|Share|Teko|Vast+Shadow&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="HandheldFriendly" content="true">
-  <title>Pocadetro Pizza App</title>
+  <script src="js/poca.js" defer></script>
 </head>
-<body>
-  <div class="container-fluid">
-      <div class="jumbotron legend text-center">
-          
-          <div class="navbar   navbar-brand legend text-center bg-black">
-    
-            <a href="index.html">Home</a>
-            <a href="#">App</a>
-            <a href="imageo.html">Menu</a>
-           
-            <a href="#">Contacts</a>
-            
-    
-          </div>
-          <h1 class="text-center container-fluid" id="pocad">PODECATRO PIZZA APP</h1>
+<body class="order-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Pocadetro Pizza home">
+      <img src="images/Emryon01-g.png" alt="" class="brand-mark">
+      <span>Pocadetro Pizza</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="imageo.html">Menu</a>
+      <a href="order.html" aria-current="page">Order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="order-intro" aria-labelledby="order-title">
+      <div>
+        <p class="eyebrow">Online ordering</p>
+        <h1 id="order-title">Customize your pizza.</h1>
+        <p>Select a size, crust, toppings, quantity, and delivery option. Your receipt will appear after you place the order.</p>
       </div>
-      <div class="app-wrap">
-          <div class=" form-group text-white "> 
-              <form action="" id="pizza-form" class=" " >
-                <h1 class=" text-black" >ORDER YOUR PIZZA THE WAY YOU LIKE IT!</h1>
-                <label for "#firstName" class="form-check-label"> First Name:</label>
-                  <div class="trio">
-                      <input id = "firstName" type = "text" required placeholder = "Your first name" >
-                  </div>
-                  
-                
-                  <br>
-                  <label for "#firstName"> Last Name:</label>
-                  <div class="trio">
-                      <input id = "lastName" type = "text" required placeholder = "Your last name" sze="8">
-                  </div>
-                
-                  
-                
-                     <br>
-                <label for "#email-add"> Email Address:</label>
-                <div class="trio">
-                    <input id = "email-add" type = "mail" required placeholder = "Enter a valid email address">
-                </div>
-                  
-                
-                   <br>
-                <label style = "margin-left:5px;" for "#dropdown"><span class=" text-info"> Select the size of pizza</span></label>
-                <div class="trio">
-                    <select id = "dropdown">
-                        <option value = "1000">large @ ksh 1000</option>
-                        <option value = "500"> medium @ ksh 500</option>
-                        <option value = "300">Small @ ksh 300</option><br>
-                   
-                     </select>
-                </div>
-      
-                <br>
-                <label for "crusts"> <span class=" text-info">Select the type of crust that you prefer.</span><br></label>
-                <div class="crustRadio trio">
-                  <label for="thin"><input type="radio" value="150" class= "radio-inline pad-l" id="thin"  name="crust"  width="100%" >Thin crust @ ksh 150 </label><br>
-                  <label for="stuffed"><input type="radio" value="200" class= "radio-inline pad-l" id="stuffed"  name="crust" >stuffed crust @ ksh 200 </label><br>
-                  <label for="gluten"><input type="radio" value="350" class= "radio-inline pad-l" id="gluten"  name="crust" >Gluten free crust @ ksh 350 </label><br>
-                  <label for="thick"><input type="radio" value="350" class= "radio-inline pad-l" id="thick"  name="crust" >Thick crust @ ksh 350  </label><br>
-                  <label for="crispy"><input type="radio" value="150" class= "radio-inline pad-l" id="crispy"  name="crust" >Crispy crust @ ksh 150 </label><br>
-                  <label for="deep"><input type="radio" value="250" class= "radio-inline pad-l" id="deep"  name="crust" >Deep crust @ ksh 250 </label>
-                
-      
-                </div>
-                <div class="toppings">
-                    <br>
-                    
-                        <label for "toppings"> <span class=" text-info">Select the toppings that you prefer(Check all that you like)</span><br></label>
-                    
-                  <div class="trio">
-                    <label for="bacon"> <input type = "checkbox" value="80" id="bacon" class="pad-l" name = "toppings" >Bacon topping @ ksh 80</label><br>
-                    <label for="echeese"><input type = "checkbox" value="150" id="echeese" class="pad-l" name = "toppings" >Extra Cheese topping @ ksh 150</label><br>
-                    <label for="gpepper"><input type = "checkbox" value="50" id="gpepper" class="pad-l" name = "toppings" >Green Peppers topping @ ksh 50</label><br>
-                   <label for="bolives"> <input type = "checkbox" value="200" id="bolives" class="pad-l" name = "toppings" >Black Olives topping @ ksh 200</label> <br>
-                    <label for="sausage"><input type = "checkbox" value="40" id="sausage" class="pad-l" name = "toppings" >Sausages topping @ ksh 40</label><br>
-                   <label for="pepperoni"> <input type = "checkbox" value="200" id="pepperoni" class="pad-l" name = "toppings" >Pepperoni topping @ ksh 200</label><br>
-                   <label for="mushroom"> <input type = "checkbox" value="200" id="mushroom" class="pad-l" name = "toppings" >Mushroom topping @ ksh 200</label><br>
-                    <label for="omelette"><input type = "checkbox" value="100" id="omelette" class="pad-l" name = "toppings" >Omelette topping @ ksh 100</label><br>
-                    <label for="onions"><input type = "checkbox" value="50" id="onions" class="pad-l" name = "toppings" >Onions topping @ ksh 50</label><br>
-                  </div>
-                    
-                    <br>
-      
-               
-                <label for "#how-many"> Enter the number of pizza: </label>
-                <div class="trio">
-                   
-                        <input id = "how-many" type = "number" required placeholder = "How many pizza do you want?"">
-                    
-      
-                </div>
-                
-                <br>
-                <label for "delivary" class="bg-black"><span class=" text-info">Would you like the pizza to be deliverd?</span></label><br>
-                <div class="trio">
-                    <input type = "radio" value="true" class="trio" name = "delivary" >Yes<br>
-                    <input type = "radio" value="false" class="trio" name = "delivary" >No<br>
-                </div>
-      
-                   
-                    <!-- <br> -->
-                    <!-- <label for "#locationName" class="form-check-label"> If <span class="text-info">'Yes'</span>, Enter your location:</label>
-                    <div class="trio">
-                        <input id = "locationName" type = "text" placeholder = "Location for delivary">
-                    </div> -->
-                       
-                    
-      
-               
-                <br>
-                <label for "#comments" class="text-info">Any suggestions or comments?  </label><br>
-                <textarea rows="4" cols="40" id = "comments">
-                
-                </textarea>
-              
-                <br>
-                <div class="subm">
-                    <input type = "submit" value = " place order" class="btn btn-primary">
-                </div> 
-               
-              </form>
-              <div class="output text-black">
-                  <h2>Receipt:</h2>
-                  <ul id="totalCost">
-        
-                  </ul>
+    </section>
 
-
-              </div>
-      
+    <section class="order-layout" aria-label="Pizza order form">
+      <form action="#" id="pizza-form" class="order-card">
+        <fieldset>
+          <legend>Your details</legend>
+          <div class="form-grid two-columns">
+            <div class="field">
+              <label for="firstName">First name</label>
+              <input id="firstName" type="text" required placeholder="Paul">
             </div>
-      </div>
-      
-    
-  </div>
-  
+            <div class="field">
+              <label for="lastName">Last name</label>
+              <input id="lastName" type="text" required placeholder="Wamaria">
+            </div>
+          </div>
+          <div class="field">
+            <label for="email-add">Email address</label>
+            <input id="email-add" type="email" required placeholder="you@example.com">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Pizza base</legend>
+          <div class="form-grid two-columns">
+            <div class="field">
+              <label for="dropdown">Size</label>
+              <select id="dropdown" required>
+                <option value="1000">Large - Ksh 1000</option>
+                <option value="500">Medium - Ksh 500</option>
+                <option value="300">Small - Ksh 300</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="how-many">Quantity</label>
+              <input id="how-many" type="number" required min="1" value="1">
+            </div>
+          </div>
+
+          <div class="choice-group">
+            <p class="group-label">Crust</p>
+            <div class="choice-grid">
+              <label for="thin"><input type="radio" value="150" id="thin" name="crust" required> Thin crust <span>Ksh 150</span></label>
+              <label for="stuffed"><input type="radio" value="200" id="stuffed" name="crust"> Stuffed crust <span>Ksh 200</span></label>
+              <label for="gluten"><input type="radio" value="350" id="gluten" name="crust"> Gluten free crust <span>Ksh 350</span></label>
+              <label for="thick"><input type="radio" value="350" id="thick" name="crust"> Thick crust <span>Ksh 350</span></label>
+              <label for="crispy"><input type="radio" value="150" id="crispy" name="crust"> Crispy crust <span>Ksh 150</span></label>
+              <label for="deep"><input type="radio" value="250" id="deep" name="crust"> Deep crust <span>Ksh 250</span></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Toppings</legend>
+          <p class="field-hint">Choose as many as you want.</p>
+          <div class="choice-grid toppings-grid">
+            <label for="bacon"><input type="checkbox" value="80" id="bacon" name="toppings"> Bacon <span>Ksh 80</span></label>
+            <label for="echeese"><input type="checkbox" value="150" id="echeese" name="toppings"> Extra Cheese <span>Ksh 150</span></label>
+            <label for="gpepper"><input type="checkbox" value="50" id="gpepper" name="toppings"> Green Peppers <span>Ksh 50</span></label>
+            <label for="bolives"><input type="checkbox" value="200" id="bolives" name="toppings"> Black Olives <span>Ksh 200</span></label>
+            <label for="sausage"><input type="checkbox" value="40" id="sausage" name="toppings"> Sausage <span>Ksh 40</span></label>
+            <label for="pepperoni"><input type="checkbox" value="200" id="pepperoni" name="toppings"> Pepperoni <span>Ksh 200</span></label>
+            <label for="mushroom"><input type="checkbox" value="200" id="mushroom" name="toppings"> Mushrooms <span>Ksh 200</span></label>
+            <label for="omelette"><input type="checkbox" value="100" id="omelette" name="toppings"> Omelette <span>Ksh 100</span></label>
+            <label for="onions"><input type="checkbox" value="50" id="onions" name="toppings"> Onions <span>Ksh 50</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Delivery</legend>
+          <div class="choice-grid delivery-grid">
+            <label><input type="radio" value="true" name="delivary" required> Deliver my pizza <span>Ksh 250</span></label>
+            <label><input type="radio" value="false" name="delivary"> I will pick it up <span>No charge</span></label>
+          </div>
+          <div class="field">
+            <label for="locationName">Delivery address</label>
+            <input id="locationName" type="text" placeholder="Enter your delivery location if needed">
+          </div>
+          <div class="field">
+            <label for="comments">Comments</label>
+            <textarea rows="4" id="comments" placeholder="Add any delivery notes or special requests."></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="button button-primary order-submit">Place Order</button>
+      </form>
+
+      <aside class="receipt-card output" aria-live="polite">
+        <h2>Receipt</h2>
+        <ul id="totalCost"></ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div>
+      <strong>Pocadetro Pizza</strong>
+      <p>Fresh pizza made to order.</p>
+    </div>
+    <a href="mailto:paulwamaria@gmail.com">paulwamaria@gmail.com</a>
+    <p>Copyright &copy; 2026 Pocadetro Pizza</p>
+  </footer>
 </body>
 </html>

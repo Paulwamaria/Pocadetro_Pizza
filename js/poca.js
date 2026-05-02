@@ -29,6 +29,7 @@ $(document).ready(function(){
 
 $("form#pizza-form").submit(function(event) {
   event.preventDefault();
+  $("ul#totalCost").empty();
 
   var inputedSizeOfPizza =parseInt($("#dropdown").children("option").filter(":selected").val());
   var inputedSizeName=$("#dropdown").children("option").filter(":selected").text();
@@ -46,12 +47,7 @@ $("form#pizza-form").submit(function(event) {
   var userTotalToppingCost=0;
   $("input[name='toppings']:checked").each(function(){            
     toppings.push(parseInt(($(this).val())));
-   
-    // toppings.forEach(topping=> totalToppingCost =totalToppingCost+topping);
     userTotalToppingCost=toppings.reduce((userTotalToppingCost,topping)=>userTotalToppingCost+topping);
-
-   
-    
 });
 
  //Get the tooping names
@@ -65,7 +61,7 @@ $("form#pizza-form").submit(function(event) {
 
   var delivaryBool=$("input[name='delivary']:checked").val();
   var inputedNumberOfPizzas=parseInt($("input#how-many").val());
-  var locationName=$("input#locationName").val();
+  var locationName=$("input#locationName").val().trim();
   var newLocation="";
   
 
@@ -73,7 +69,7 @@ $("form#pizza-form").submit(function(event) {
    //delivary options
    function askDelivary(){
     if(delivaryBool==="true"){
-      newLocation=prompt("Enter the location for delivary");
+      newLocation=locationName || prompt("Enter the location for delivery");
     }else{
       return false;
     }
@@ -89,7 +85,7 @@ $("form#pizza-form").submit(function(event) {
       newPrice=newPizza.pizzaPrice();
       if(delivaryBool==="true"){
          totalCost= newPrice + costOfDelivary;
-         $("ul#totalCost").append("<li><span class='contact'>" +"You requested for delivary at location " +newLocation + " at a fixed charge of "+costOfDelivary+ " ksh"+"</span></li>"); 
+         $("ul#totalCost").append("<li><span class='contact'>" +"Delivery to " +newLocation + " is charged at Ksh "+costOfDelivary+ "."+"</span></li>"); 
       }else{
         totalCost=newPrice;
       }
@@ -99,13 +95,14 @@ $("form#pizza-form").submit(function(event) {
 
 
      //display output
+     $(".order-layout").addClass("receipt-visible");
      $(".output").show();
 
-     $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +toppingNames+"</span></li>");  
+     $("ul#totalCost").append("<li><span class='contact'>" +"Toppings: " +(toppingNames.length ? toppingNames.join(", ") : "No extra toppings")+"</span></li>");  
   // $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +inputedSizeName  +"</span></li>");
-  $("ul#totalCost").append("<li><span class='contact'>" +"You orderd " + inputedNumberOfPizzas +" "+ inputedSizeName +""  + "</span></li>"); 
-  $("ul#totalCost").append("<li><span class='contact'>" +"You selected " +selectedCrustName + "</span></li>");
-  $("ul#totalCost").append("<li><span class='contact'>" +"Total cost is ksh: "+ totalCost+ " "+"</span></li>");
+  $("ul#totalCost").append("<li><span class='contact'>" +"Order: " + inputedNumberOfPizzas +" x "+ inputedSizeName +""  + "</span></li>"); 
+  $("ul#totalCost").append("<li><span class='contact'>" +"Crust: " +selectedCrustName + "</span></li>");
+  $("ul#totalCost").append("<li><span class='contact'>" +"Total: Ksh "+ totalCost+ " "+"</span></li>");
  
   
 });

@@ -1,79 +1,236 @@
-
-body{
-  background-image:linear-gradient(circle,#000000,#9a0eeb);
-  background-color: #000000;
+.order-page {
+  background: #fff8ef;
 }
-.jumbotron{
- 
-background-image: url("http://www.delonghi.com/Global/recipes/multifry/pizza_fresca.jpg");
-background-repeat:no-repeat;
 
-margin-top:40px;
+.order-intro {
+  padding: clamp(28px, 4vw, 48px) clamp(18px, 5vw, 72px);
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
 }
-.form-group{
 
-
-  margin:auto;
-
-  background-image:radial-gradient(circle,#000000,#9a0eeb);
-  border-style:solid;
-  padding-left:15%;
+.order-intro > div {
+  max-width: 860px;
+  margin-right: auto;
+  margin-left: auto;
 }
-.text-info{
-  width:100%;
-  font-family: 'Lobster Two', cursive;
+
+.order-intro h1 {
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.order-intro p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.order-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  max-width: 860px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: clamp(28px, 5vw, 64px) clamp(18px, 5vw, 72px);
+}
+
+.order-layout.receipt-visible {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  max-width: 1180px;
+}
+
+.order-card,
+.receipt-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.order-card {
+  padding: clamp(22px, 4vw, 36px);
+}
+
+.order-card fieldset {
+  margin: 0;
+  padding: 0 0 28px;
+  border: 0;
+}
+
+.order-card fieldset + fieldset {
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.order-card legend,
+.receipt-card h2 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.65rem;
+  line-height: 1.1;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.field label,
+.group-label {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 12px;
+  color: var(--ink);
+  background: #fffdf9;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.field textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--tomato);
+  box-shadow: 0 0 0 3px rgba(200, 61, 47, 0.14);
+  outline: none;
+}
+
+.field-hint {
+  margin: -8px 0 16px;
+  color: var(--muted);
+}
+
+.choice-group {
+  margin-top: 10px;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.choice-grid label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 58px;
+  margin: 0;
+  padding: 13px 14px;
+  color: var(--ink);
+  background: #fffdf9;
+  border: 1px solid var(--line);
+  border-radius: 8px;
   font-weight: 800;
-  font-size:30px;
- 
-}
-.text-black{
-  width:100%;
-  font-family: 'Lobster Two', cursive;
-  font-weight: 800;
-  font-size:30px;
-  color:black;
-  margin-top:3%;
-
-}
-.subm{
-  padding-left:50%;
-}
-.app-wrap{
-  width:720px;
-  margin:auto;
-  opacity:0.8;
+  line-height: 1.25;
+  cursor: pointer;
 }
 
-#pizza-form label{
-  font-weight: 400;
-  font-size: 22px;
+.choice-grid input {
+  flex: 0 0 auto;
+  margin: 0;
 }
-checkboxes{
-  padding-left:20%;
-  background-color:blue;
+
+.choice-grid span {
+  margin-left: auto;
+  color: var(--tomato);
+  font-size: 0.9rem;
+  font-weight: 900;
+  white-space: nowrap;
 }
-.trio{
-  padding-left:10%;
+
+.choice-grid label:has(input:checked) {
+  border-color: var(--tomato);
+  background: rgba(200, 61, 47, 0.08);
 }
-@media(max-width:576px){
-  .form-group{
-    padding-left:2%;
+
+.toppings-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.delivery-grid {
+  margin-bottom: 18px;
+}
+
+.order-submit {
+  width: 100%;
+  min-height: 52px;
+  border: 0;
+  cursor: pointer;
+}
+
+.receipt-card {
+  position: sticky;
+  top: 102px;
+  display: none;
+  padding: 26px;
+}
+
+.receipt-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.receipt-card li {
+  padding: 12px 0;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  line-height: 1.5;
+}
+
+.receipt-card li:last-child {
+  color: var(--ink);
+  border-bottom: 0;
+  font-weight: 900;
+}
+
+@media (max-width: 980px) {
+  .order-layout,
+  .two-columns,
+  .choice-grid,
+  .toppings-grid {
+    grid-template-columns: 1fr;
   }
 
-}
-@media(max-width:720px){
-  textarea{
-    width:90%;
+  .receipt-card {
+    position: static;
   }
-  .app-wrap{
-    width:100%;
-  }
-}
-.output{
-  display:none;
-  background-color:white;
-  width:80%;
-}
-.output h2{
-  font-size:40px;
 }
