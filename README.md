@@ -1,36 +1,71 @@
-# Pocadetro_Pizza
-Pocadetro pizza is a web application that allows a user to order pizza online. The application allows the user to make a choice when it comes to the size, crust ,toppings or mode of delivery. The application then calculates the total cost and notifies the user.
-#**link
+# Pocadetro Pizza
+
+Pocadetro Pizza is a static pizza ordering website. Customers can review the menu, customize a pizza order, choose pickup or delivery, and see a calculated receipt total.
+
+## Live Site
+
 https://paulwamaria.github.io/Pocadetro_Pizza/
 
-**Developer**
+## Pages
 
-The application is build by **Paul Kamau wamaria**. who is currently a student at Moringa.
+- `index.html` - homepage with brand introduction and calls to action.
+- `imageo.html` - menu page with pizza sizes, crust options, toppings, and prices.
+- `order.html` - order form with receipt calculation.
+- `contact.html` - contact and support page.
 
-**BDD**
-The website has a landing homepage that portrays their pizza services. 
-The application also has a services link that gives more information about the services offered.
-The application allows the user to make a choice on :
-/*size of pizza
-/*type of crust
-/*type of topping
-/*mode of delivery
-The application calculates and notifies the user on the total cost.
-The application allows user interactivity.
-The application is responsive deppending on the screen-width.
+## Features
 
-**Technology used**
+- Responsive restaurant-style layout.
+- Menu sections for sizes, crusts, and toppings.
+- Pizza customization form.
+- Delivery or pickup selection.
+- Receipt summary with total cost.
+- Contact page with email, order, and menu links.
 
-html
-css
-jQuery
-Bootstrap
+## Technologies
 
-**set up**
-follow this link:
+- HTML
+- CSS
+- Bootstrap CSS
+- JavaScript
+- jQuery
 
-**contacts**
+## Setup
 
-paulwamaria@gmail.com
+1. Clone the repository.
+2. Open the project folder.
+3. Open `index.html` in a browser.
 
-Copyright (c) 2019 Paulwamaria
+No build step or development server is required.
+
+## Project Structure
+
+```text
+.
+├── contact.html
+├── imageo.html
+├── index.html
+├── order.html
+├── css/
+│   ├── bootstrap.css
+│   ├── imageo.css
+│   ├── order.css
+│   └── poca.css
+├── images/
+│   ├── Emryon01-g.png
+│   └── Pizzabgjpg
+└── js/
+    └── poca.js
+```
+
+## Author
+
+Paul Kamau Wamaria
+
+## Contact
+
+[paulwamaria@gmail.com](mailto:paulwamaria@gmail.com)
+
+## License
+
+Copyright (c) 2026 Paulwamaria.
