@@ -301,6 +301,95 @@ img {
   text-decoration: none;
 }
 
+.contact-page {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.contact-hero,
+.contact-layout {
+  max-width: 1180px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contact-hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  padding: clamp(46px, 7vw, 92px) clamp(18px, 5vw, 72px);
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-hero h1,
+.contact-card h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.contact-hero h1 {
+  max-width: 700px;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+.contact-hero p:not(.eyebrow) {
+  max-width: 620px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  padding: clamp(34px, 5vw, 68px) clamp(18px, 5vw, 72px);
+}
+
+.contact-card {
+  min-height: 260px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.contact-label {
+  margin: 0 0 40px;
+  color: var(--tomato);
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-card h2 {
+  font-size: 1.8rem;
+}
+
+.contact-card p:not(.contact-label) {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.contact-card a {
+  color: var(--tomato-dark);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: var(--ink);
+  text-decoration: none;
+}
+
 /* Legacy styles still used by the order and menu pages. */
 #logo {
   width: 50%;
@@ -343,7 +432,8 @@ img {
 @media (max-width: 900px) {
   .features,
   .menu-preview,
-  .menu-cards {
+  .menu-cards,
+  .contact-layout {
     grid-template-columns: 1fr;
   }
 
@@ -388,6 +478,11 @@ img {
   }
 
   .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contact-hero {
     align-items: flex-start;
     flex-direction: column;
   }
